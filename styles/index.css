@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+:root {
+    --patrick: #ffbf49;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: .5px;
+    justify-content: space-between;
+    background-color: var(--patrick);
+}
+
+.logo img {
+    width: 130px;
+    margin-left: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 15px;
+    gap: 15px;
+    background-color: var(--patrick);
+    outline: 3px var(--patrick) solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .menu-item .text {
+    color: black;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .menu-item i {
+    transition: 400ms;
+  }
+  
+  .menu-item:hover {
+    background-color: transparent;
+  }
+  
+  .menu-item:hover .text {
+    color: #181717;
+  }
+  
+  .menu-item:hover i {
+    fill: #181717;
+  }
+
+  .menu-item nav {
+    align-items: center;
+    display: flex;
+  }
+
+.search input {
+    padding: 10px;
+    background-color: #ffac13;
+    border: none;
+    width: 30rem;
+}
+
+.search input:focus {
+    outline: none;
+}
+#login-button, #cadastro-button {
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+
+}
+
+#second-header {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#second-header li {
+    display: inline;
+    justify-content: space-between;
+    margin-left: calc((100% - 6) - .5rem);
+    position: relative;
+}
+
+#header-text {
+    padding-right: 1rem;
+}
+
+.banner {
+    position: relative;
+    height: 300px;
+}
+
+.banner img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(1);
+    object-fit: fill;
+    z-index: -1;
+}
+
+.categories {
+    padding: 0 3rem;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding:  1rem;
+}
+
+.categories ul::-webkit-scrollbar {
+    height: 8px;
+}
+
+.categories ul::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.categories ul::-webkit-scrollbar-thumb {
+    background-color: var(--patrick);
+    border-radius: 20px;
+}
+
+.categories ul li {
+    min-width: calc((100% / 3) - 1rem);
+    margin-left: 1rem;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-description {
+    padding: 10px;
+    background-color: var(--patrick);
+}
+
+.category-description span {
+    font-weight: 700;
+    color: black;
+    font-size: 20px;
+}
+
+.category-description p {
+    padding-top: 1rem;
+    font-size: 18px;
+    color: black;
+}
+
+.category-img {
+    overflow: hidden;
+    height: 250px;
+}
+
+.category-img img{
+    transition: all;
+}
+
+.category-img img:hover {
+    transform: scale(1.1);
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: solid 2px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: var(--patrick);
+}
+
+.product-item li {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.product-item div {
+    height: 200px;
+    background-color: #ffffff;
+    padding: .75rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-item img:hover {
+    transform: scale(1.1);
+}
+
+.product-item p{
+    font-weight: 600;
+}
+
+.product-item span{
+    color: var(--black);
+    font-weight: 500;
+    padding: .5rem 0;
+}
+
+.product-item button{
+    width: fit-content;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: forestgreen;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .container svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  .container svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .container input:checked ~ svg {
+    fill: #ff000d;
+  }
+
+  footer {
+    height: 200px;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: solid 1px var(--dark-blue);
+    flex-wrap: wrap;
+    background-color: var(--patrick);
+}
+
+.newsletter form {
+    display: flex;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.newsletter input, 
+.newsletter button {
+    border: none;
+    background-color: #ffac13;
+    padding: .5rem;
+}
+
+.newsletter input {
+    width: 100%;
+}
+
+.newsletter button {
+    cursor: pointer;
+}
+
+.newsletter h3 {
+    padding-bottom: 1rem;
+}
+
+.utils-links p,
+.social-links p {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.social-links ul a, .utils-links ul a {
+    padding: 3px 0;
+    color: var(--black);
+} 
+
+.social-links ul {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.copyright {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--patrick);
+    margin-top: 20px;
+}  
