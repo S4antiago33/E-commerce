@@ -32,6 +32,10 @@ header {
     background-color: var(--patrick);
 }
 
+.header a {
+    color: var(--black);
+}
+
 .logo img {
     width: 130px;
     margin-left: 2rem;
